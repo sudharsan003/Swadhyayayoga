@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Swadhyay Yoga</title>
+	<link rel="stylesheet" href="index.css" />
+	<!-- Fonts: Playfair Display for headings, Karla for body text -->
+	<!-- Font Awesome for minimalist black icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<!-- Header / Navigation -->
+	<header class="site-header" id="site-header">
+		<div class="container nav-container">
+			<a href="#home" class="logo">
+				<span class="lotus" aria-hidden="true">✿</span>
+				<span class="logo-text">SWADHYAYA YOGA</span>
+			</a>
+
+			<button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+				<span class="hamburger"></span>
+			</button>
+
+			<nav class="nav" id="nav">
+				<ul class="nav-list">
+					<li><a href="#home">HOME</a></li>
+					<li><a href="./about.html">ABOUT US</a></li>
+					<li><a href="./classes.html">CLASSES &amp; SCHEDULE</a></li>
+					<li><a href="#techniques">TECHNIQUES</a></li>
+					<li><a href="#testimonials">TESTIMONIALS</a></li>
+				</ul>
+			</nav>
+
+			<a class="btn register" href="https://docs.google.com/forms/d/e/1FAIpQLSfIzCvYCXStnNeaX9WERmhpwey_k5C2RK3rLk8SVas2u_Rx6g/viewform?usp=header">REGISTER NOW</a>
+		</div>
+	</header>
+
+	<!-- Hero -->
+	<main>
+		<section class="hero" id="home" aria-label="Hero">
+			<div class="hero-overlay"></div>
+			<div class="container hero-content">
+				<p class="eyebrow">SWADHYAYA YOGA</p>
+				<h1>DISCOVER INNER PEACE AND STRENGTH</h1>
+				<p class="lead">Embark on a journey of self-discovery and holistic wellbeing</p>
+				<div class="hero-cta">
+					<a class="btn" href="#about">LEARN MORE</a>
+					<a class="btn outline" href="./classes.html">VIEW CLASSES</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- About -->
+		<section class="about" id="about">
+			<div class="container about-grid">
+				<div class="about-photo animate-on-scroll from-left" data-delay="0">
+					<div class="photo-circle" aria-hidden="true">
+						<img src="./IMG_4849.JPG" alt="Founder" class="photo-img" />
+					</div>
+				</div>
+				<div class="about-content animate-on-scroll from-right" data-delay="100">
+					<h2>Experience Yoga That Feels Like Home </h2>
+					<p class="welcome">Welcome — I'm Jayshree S, founder of Swadhyay Yoga. Our studio offers mindful movement, meditation, and
+						a supportive community to help you restore balance and build strength.Join my yoga sessions designed for all ages, 
+						especially kids and women. Whether in-person in Chennai or online, each class helps you grow stronger, more flexible, 
+						and calmer — all while enjoying the journey. Personalized guidance, mindful breathing, and a fun, supportive environment await you!</p>
+
+					<div class="about-actions">
+						<a class="btn" href="#classes">VIEW CLASS SCHEDULE</a>
+						<a class="btn" href="#register">JOIN A CLASS</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Key Offerings -->
+		<section class="offerings" id="techniques">
+			<div class="container">
+				<h3 class="section-title">KEY OFFERINGS</h3>
+				<div class="offerings-grid">
+					<!-- 1 -->
+					<article class="offering-card" data-index="1">
+						<div class="offering-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+						<h4>Group Lessons</h4>
+						<p>Interactive group classes for all levels in a welcoming, supportive environment.</p>
+					</article>
+					<!-- 2 -->
+					<article class="offering-card" data-index="2">
+						<div class="offering-icon"><i class="fas fa-om" aria-hidden="true"></i></div>
+						<h4>Ashtanga Yoga</h4>
+						<p>Traditional dynamic practice building strength, flexibility, and mental focus through flowing sequences.</p>
+					</article>
+					<!-- 3 -->
+					<article class="offering-card" data-index="3">
+						<div class="offering-icon"><i class="fas fa-dumbbell" aria-hidden="true"></i></div>
+						<h4>Power Yoga</h4>
+						<p>High-energy flow combining cardio and strength for physical transformation and endurance.</p>
+					</article>
+					<!-- 4 -->
+					<article class="offering-card" data-index="4">
+						<div class="offering-icon"><i class="fas fa-baby" aria-hidden="true"></i></div>
+						<h4>Pregnancy Yoga</h4>
+						<p>Gentle prenatal practice supporting comfort, strength, and relaxation during the pregnancy journey.</p>
+					</article>
+					<!-- 5 -->
+					<article class="offering-card" data-index="5">
+						<div class="offering-icon"><i class="fas fa-user" aria-hidden="true"></i></div>
+						<h4>Private Lessons</h4>
+						<p>Personalized one-on-one sessions tailored to your individual goals and specific needs.</p>
+					</article>
+					<!-- 6 -->
+					<article class="offering-card" data-index="6">
+						<div class="offering-icon"><i class="fas fa-wind" aria-hidden="true"></i></div>
+						<h4>Pranayama</h4>
+						<p>Breathing techniques to calm the mind, energize the body, and improve focus.</p>
+					</article>
+					<!-- 7 -->
+					<article class="offering-card" data-index="7">
+						<div class="offering-icon"><i class="fas fa-spa" aria-hidden="true"></i></div>
+						<h4>Meditation</h4>
+						<p>Guided mindfulness practices to reduce stress and cultivate inner peace daily.</p>
+					</article>
+					<!-- 8 -->
+					<article class="offering-card" data-index="8">
+						<div class="offering-icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+						<h4>Eye Exercises</h4>
+						<p>Simple techniques to relieve eye strain, improve focus, and relax vision naturally.</p>
+					</article>
+					<!-- 9 -->
+					<article class="offering-card" data-index="9">
+						<div class="offering-icon"><i class="fas fa-user-friends" aria-hidden="true"></i></div>
+						<h4>Yoga for Kids &amp; Women</h4>
+						<p>Specialized classes designed for children and women of all ages and abilities.</p>
+					</article>
+				</div>
+			</div>
+
+			<!-- Inline script: Intersection Observer for offerings only (scoped to this section) -->
+			<script>
+			(function(){
+				const cards = document.querySelectorAll('.offerings .offering-card');
+				if(!cards.length) return;
+				const obs = new IntersectionObserver((entries, observer) => {
+					entries.forEach(entry => {
+						if(entry.isIntersecting){
+							entry.target.classList.add('animate-in');
+							observer.unobserve(entry.target);
+						}
+					});
+				},{threshold:0.18});
+				cards.forEach(c=> obs.observe(c));
+			})();
+			</script>
+		</section>
+
+		<!-- Testimonials -->
+		<section class="testimonials" id="testimonials">
+			<div class="container">
+				<h3 class="section-title">TESTIMONIALS</h3>
+				<div class="testimonial-slider" id="testimonial-slider">
+					<div class="slides-track">
+						<!-- Group A: testimonials 1,2,3 -->
+						<div class="group-slide" data-group="0">
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">C</div>
+									<p>This is one the best places to learn yoga. The classes are calming, relaxing, and guided with genuine care. The atmosphere is peaceful and perfect for practice. Highly recommend it for anyone looking to improve their physical and mental well-being!</p>
+									<cite>— Charu Prabhaa</cite>
+								</div>
+							</div>
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">R</div>
+									<p>Very satisfied with the teaching. Learnt many new things. A very comfortable space for all women and kids to practice.</p>
+									<cite>— Rani Chandrakala</cite>
+								</div>
+							</div>
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">H</div>
+									<p>I really enjoyed the yoga class. The instructor was patient and clear. I felt relaxed, stretched, and more focused. Definitely coming back for more sessions.</p>
+									<cite>— Harshini G</cite>
+								</div>
+							</div>
+						</div>
+
+						<!-- Group B: testimonials 4,5,6 -->
+						<div class="group-slide" data-group="1">
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">V</div>
+									<p>Great place, must attend their classes. The instructor is very friendly and kind, she teaches really good. Now I can do yoga more easier.</p>
+									<cite>— VENI KOWSHIKA V</cite>
+								</div>
+							</div>
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">K</div>
+									<p>I like places that make you realise how tiny you and your problems are. And for me it is the place ❤️❤️</p>
+									<cite>— Karishmaa Sathish</cite>
+								</div>
+							</div>
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">S</div>
+									<p>Calm space, clear instructions—perfect for all levels. Feel relaxed and refreshed after every session. Great mentor 👍</p>
+									<cite>— Sneha OG</cite>
+								</div>
+							</div>
+						</div>
+						<!-- Group C: testimonials 7,8,9 (new) -->
+						<div class="group-slide" data-group="2">
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">U</div>
+									<p>"The environment is calm and peaceful. Very good guidance is provided by the yoga teacher. Monthly fee is very reasonable."</p>
+									<cite>— Udhaya</cite>
+								</div>
+							</div>
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">P</div>
+									<p>"I absolutely love my yoga class! The space is very calm and peaceful — it instantly puts me in the right mindset. My yoga teacher is so encouraging and patient. She takes the time to teach each asana properly and ensures we're doing it right. I've grown so much in my practice because of her guidance. It's one of the highlights of my week. Highly recommended!"</p>
+									<cite>— Pari Arunagiri</cite>
+								</div>
+							</div>
+							<div class="slide-col">
+								<div class="testimonial">
+									<div class="avatar">A</div>
+									<p>"Good yoga instructor, best place to improve your physical and mental health. ❤️"</p>
+									<cite>— Anu Priya</cite>
+								</div>
+							</div>
+						</div>
+						<!-- cloned first group will be appended by JS to enable continuous leftward motion -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="site-footer">
+			<div class="footer-inner container">
+				<div class="footer-left">
+					<div class="footer-contact">Contact Us</div>
+					<!-- phone numbers moved to bottom-right -->
+				</div>
+				<div class="footer-center">
+					<div class="footer-copy">© 2025 Swadhyaya Yoga. All rights reserved</div>
+				</div>
+				<div class="footer-right">
+						<div class="footer-email"><span style="display:inline-block;vertical-align:middle;margin-right:8px;"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5C3 6.67157 3.67157 6 4.5 6H19.5C20.3284 6 21 6.67157 21 7.5V16.5C21 17.3284 20.3284 18 19.5 18H4.5C3.67157 18 3 17.3284 3 16.5V7.5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 7.5L12 13L3 7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="mailto:swadhyayayoga0809@gmail.com">swadhyayayoga0809@gmail.com</a></div>
+						<div class="footer-location"><span style="display:inline-block;vertical-align:middle;margin-right:8px;"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 10.5C21 16.5 12 21 12 21C12 21 3 16.5 3 10.5C3 7.18629 5.68629 4.5 9 4.5C11.2091 4.5 13 6.29086 13 8.5C13 6.29086 14.7909 4.5 17 4.5C20.3137 4.5 23 7.18629 23 10.5H21Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12.75C13.3807 12.75 14.5 11.6307 14.5 10.25C14.5 8.86929 13.3807 7.75 12 7.75C10.6193 7.75 9.5 8.86929 9.5 10.25C9.5 11.6307 10.6193 12.75 12 12.75Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>S2-2nd Floor, 354, Paneer Nagar, Mogappair, Chennai, Tamil Nadu 600037</div>
+					<div class="footer-phone-right">
+					  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.01.38 1.99.76 2.92a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.16-1.16a2 2 0 0 1 2.11-.45c.93.38 1.91.64 2.92.76A2 2 0 0 1 22 16.92z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					  <span>9500434722, 7358218027</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</main>
+
+	<script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- &amp; SOUL -->

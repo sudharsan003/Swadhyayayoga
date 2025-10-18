@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>About Us - Swadhyaya Yoga</title>
+	<link rel="stylesheet" href="index.css" />
+	<!-- Fonts: Playfair Display for headings, Karla for body text -->
+	<!-- Font Awesome for minimalist black icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<!-- Header / Navigation -->
+	<header class="site-header" id="site-header">
+		<div class="container nav-container">
+			<a href="index.html" class="logo">
+				<span class="lotus" aria-hidden="true">✿</span>
+				<span class="logo-text">SWADHYAYA YOGA</span>
+			</a>
+
+			<button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+				<span class="hamburger"></span>
+			</button>
+
+			<nav class="nav" id="nav">
+				<ul class="nav-list">
+					<li><a href="index.html">HOME</a></li>
+					<li><a class="active" href="about.html">ABOUT US</a></li>
+					<li><a href="classes.html">CLASSES &amp; SCHEDULE</a></li>
+					<li><a href="index.html#techniques">TECHNIQUES</a></li>
+					<li><a href="index.html#testimonials">TESTIMONIALS</a></li>
+				</ul>
+			</nav>
+
+			<a class="btn register" href="https://docs.google.com/forms/d/e/1FAIpQLSfIzCvYCXStnNeaX9WERmhpwey_k5C2RK3rLk8SVas2u_Rx6g/viewform?usp=header">REGISTER NOW</a>
+		</div>
+	</header>
+
+	<main>
+			<!-- About Hero Section with blurred fixed background (page-scoped styles) -->
+			<style>
+				/* Background and overlay */
+				.about-bg-wrap{position:relative}
+				.about-bg{
+					position:fixed;left:0;top:0;width:100%;height:100%;z-index:0;background-image:url('background.jpg');background-size:cover;background-position:center;filter:blur(6px) brightness(0.6);transform:scale(1.02);
+				}
+				.about-overlay{position:fixed;left:0;top:0;width:100%;height:100%;z-index:1;background:rgba(255,255,255,0.06)}
+				/* Content container sits above overlay */
+				.about-content{position:relative;z-index:2;padding-top:100px;padding-bottom:60px}
+
+				/* Two-column profile layout */
+				.profile-grid{display:flex;gap:40px;align-items:center;max-width:1100px;margin:0 auto;padding:40px 20px}
+				.profile-left{flex:0 0 40%;display:flex;justify-content:center}
+				.profile-right{flex:1}
+
+				.circle-img{width:320px;height:320px;border-radius:50%;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.25),0 0 40px rgba(255,255,255,0.06) inset;border:6px solid rgba(255,255,255,0.18);display:block}
+					.circle-img.small{width:256px;height:256px;border-radius:50%;border:6px solid rgba(255,255,255,0.18);box-shadow:0 14px 30px rgba(0,0,0,0.28)}
+
+				.text-card{background:rgba(255,255,255,0.88);padding:28px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.12);color:#2c3e50}
+
+				/* Stacked small images layout */
+				.stacked-section{display:flex;gap:40px;align-items:flex-start;max-width:1100px;margin:40px auto;padding:20px}
+				.stacked-left{flex:1}
+				.stacked-right{flex:0 0 260px;display:flex;flex-direction:column;gap:18px;align-items:center}
+
+				/* Responsive tweaks */
+				@media (max-width:900px){.profile-grid{flex-direction:column;text-align:center}.profile-left{order:0}.profile-right{order:1}.circle-img{width:220px;height:220px}.stacked-section{flex-direction:column-reverse;align-items:center}.stacked-right{flex-direction:row;gap:12px}}
+						/* Overlap positions for the small circles (C-shaped) */
+						/* 80% of main hero circle (main = 320px) => ~256px */
+						.small-top{width:256px;height:256px;border-radius:50%;box-shadow:0 14px 30px rgba(0,0,0,0.28);border:6px solid rgba(255,255,255,0.22)}
+						.small-mid{width:256px;height:256px;border-radius:50%;box-shadow:0 14px 30px rgba(0,0,0,0.26);border:6px solid rgba(255,255,255,0.20)}
+						.small-bot{width:256px;height:256px;border-radius:50%;box-shadow:0 16px 34px rgba(0,0,0,0.30);border:6px solid rgba(255,255,255,0.18)}
+
+						@media (max-width:900px){
+							.stacked-right{width:100%;height:auto}
+							.small-top,.small-mid,.small-bot{position:relative;right:auto;top:auto;transform:none;width:176px;height:176px}
+						}
+			</style>
+
+			<div class="about-bg-wrap">
+				<div class="about-bg" aria-hidden="true"></div>
+				<div class="about-overlay" aria-hidden="true"></div>
+
+				<section class="about-content">
+					<div class="container" style="text-align:center;">
+						<h1 style="font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 42px); color: #fff; margin: 0 0 8px; font-weight: 700;">SWADHYAYA YOGA</h1>
+						<p style="font-family: 'Karla', sans-serif; color: rgba(255,255,255,0.92); font-size:18px; margin:0 0 26px; letter-spacing:1px;">ABOUT US</p>
+					</div>
+
+					<!-- Profile two-column -->
+					<div class="profile-grid animate-on-scroll" data-delay="0">
+						<div class="profile-left">
+							<div class="circle-img" style="background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden">
+								<img src="./IMG_4849.JPG" alt="Jayshree S" style="width:100%;height:100%;object-fit:cover;display:block" />
+							</div>
+						</div>
+						<div class="profile-right">
+							<div class="text-card animate-on-scroll from-left" data-delay="120">
+								<h2 style="font-family:'Playfair Display';margin-top:0;color:#2c3e50;">Jayshree S</h2>
+								<p class="tagline" style="font-family: 'Karla',sans-serif;color:#666;margin-top:0;font-style:italic">Certified Yoga Instructor &amp; Evaluator</p>
+								<div style="font-family:'Karla',sans-serif;color:#444;line-height:1.75;margin-top:14px;font-size:15px">
+									<p style="margin-bottom:12px">Namaste, I'm Jayshree S — a certified Yoga Instructor and Evaluator under the Ministry of Ayush, Government of India.</p>
+									<p style="margin-bottom:12px">My yoga journey began when I was just five years old. At that age, I didn't fully understand what yoga truly was — all I knew was that it made me feel calm, happy, and alive. With time, practice, and the gentle encouragement of my parents and teachers, yoga became more than just a routine — it became my passion and purpose.</p>
+									<p style="margin-bottom:12px">I completed my Diploma in Yoga Teacher Training from Bharat Sevak Samaj and later earned certification as a Yoga Teacher and Evaluator from the Yoga Certification Board, Ministry of Ayush, Government of India. Over the years, I've received multiple recognitions and represented at national and international events.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Stacked small images (on right) with text on left -->
+					<div class="stacked-section animate-on-scroll" data-delay="80">
+						<!-- Section 1: My Yoga Journey & Philosophy -->
+						<!-- left card: reserve space so circles can sit to the right -->
+						<div class="stacked-left" style="position:relative;max-width:calc(100% - 420px);">
+							<div id="stacked-left-card" class="text-card" style="background:white;border-radius:16px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.12);color:#2c3e50;">
+								<!-- card aligned to middle circle by script (id used as hook) -->
+								<div class="text-card-inner">
+								<h3 style="font-family:'Playfair Display';margin-top:0;color:#2c3e50;">My Yoga Journey & Philosophy</h3>
+								<p style="font-family:'Karla',sans-serif;color:#444;line-height:1.7;font-size:15px;margin-top:8px">What started as playful stretches grew into a lifelong pursuit of balance, discipline, and mindfulness. I believe in creating a supportive environment where everyone feels comfortable exploring their practice at their own pace.</p>
+								<p style="font-family:'Karla',sans-serif;color:#444;line-height:1.7;font-size:15px;margin-top:8px">Through classes that balance strength, flexibility, and breath, I aim to help students find stillness, strength, and self-love.</p>
+							</div>
+						</div>
+
+									<!-- Edge-to-edge C-formation: positions set so circles touch but do not overlap -->
+									<div class="stacked-right" style="position:relative;width:380px;height:768px;margin-left:auto;margin-right:0;display:block;">
+										<div id="small-wrap-right" class="small-wrap" style="position:relative;width:380px;height:100%;margin-left:auto;margin-right:40px;">
+											<!-- top: positioned to the right (initial/fallback positions - script will correct on load) -->
+											<div class="circle-img small small-top" style="position:absolute;left:92px;top:0;z-index:3;">
+												<img src="./1.jpg" alt="class 1" style="width:100%;height:100%;object-fit:cover;display:block" />
+											</div>
+											<!-- middle: below and to the left; script will compute exact positions -->
+											<div class="circle-img small small-mid" style="position:absolute;left:-68px;top:200px;z-index:2;">
+												<img src="./2.jpg" alt="class 2" style="width:100%;height:100%;object-fit:cover;display:block" />
+											</div>
+											<!-- bottom: below middle and to the right -->
+											<div class="circle-img small small-bot" style="position:absolute;left:92px;top:400px;z-index:1;">
+												<img src="./yoga homepage 3.webp" alt="class 3" style="width:100%;height:100%;object-fit:cover;display:block" />
+											</div>
+										</div>
+									</div>
+					</div>
+
+							</section>
+
+							<!-- Mirrored section: circles on LEFT (V-shape) and content card on RIGHT -->
+							<section class="mirrored-section" style="padding-top:80px;padding-bottom:60px;">
+							  <div class="container" style="max-width:1100px;margin:0 auto;display:flex;align-items:flex-start;gap:40px;">
+								<!-- Section 2: Swadhayaya (mirror of Section 1) -->
+								<!-- Left: circles - ensure they sit on the left and form L->R->L -->
+									<div style="flex:0 0 380px;position:relative;width:380px;height:768px;margin-right:40px;">
+										<div id="small-wrap-left" class="small-wrap" style="position:relative;width:380px;height:100%">
+											<!-- top: positioned to the left (fallback) -->
+											<div class="circle-img small small-top" style="position:absolute;left:0;top:0;z-index:3;">
+												<img src="https://img.freepik.com/free-photo/group-young-people-easy-seat-pose-rear-view_1163-5012.jpg?semt=ais_hybrid&w=740&q=80" alt="class 1" style="width:100%;height:100%;object-fit:cover;display:block" />
+											</div>
+											<!-- middle: shifted right to form the V; script computes exact positions -->
+											<div class="circle-img small small-mid" style="position:absolute;left:160px;top:200px;z-index:2;">
+												<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOESaittMgN4a6PH7KKNZ-D5_vSWKRW72clg&s" alt="class 2" style="width:100%;height:100%;object-fit:cover;display:block" />
+											</div>
+											<!-- bottom: back to left -->
+											<div class="circle-img small small-bot" style="position:absolute;left:0;top:400px;z-index:1;">
+												<img src="https://img.freepik.com/premium-photo/mat-youll-find-out-what-truly-matters-shot-group-young-men-women-practicing-yoga-fitness-class_590464-22372.jpg?w=360" alt="class 3" style="width:100%;height:100%;object-fit:cover;display:block" />
+											</div>
+										</div>
+									</div>
+
+								<!-- Right: content card aligned with middle circle -->
+									<div style="flex:1;position:relative;">
+										<div id="mirrored-right-card" class="text-card" style="position:relative;background:white;border-radius:16px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.12);color:#2c3e50;top:0px;">
+								 	        <h3 style="font-family:'Playfair Display';margin-top:0;color:#2c3e50;">Swadhayaya</h3>
+								 	        <p style="font-family:'Karla',sans-serif;color:#444;line-height:1.7;font-size:15px;margin-top:8px">Swadhayaya, meaning 'self-study', is at the core of my philosophy. Through physical postures, breathwork, and meditation, we delve inward to understand ourselves and true nature.</p>
+								 	        <p style="font-family:'Karla',sans-serif;color:#444;line-height:1.7;font-size:15px;margin-top:8px">My classes are designed to be accessible at all levels, a community where growth and healing flourish. Join me in this beautiful exploration of mind, body, and spirit.</p>
+								 	      </div>
+								 	    </div>
+							  </div>
+							</section>
+			</div>
+
+		<!-- My Story Section -->
+		<section class="story-section" style="padding: 60px 0; background: var(--bg);">
+			<div class="container">
+				<div class="story-card animate-on-scroll from-left" data-delay="0" style="background: white; border-radius: 16px; padding: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); max-width: 900px; margin: 0 auto;">
+					<h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #2c3e50; margin: 0 0 20px; text-align: center; font-weight: 700;">My Yoga Journey</h2>
+					<div style="text-align: center; margin-bottom: 30px;">
+						<i class="fas fa-heart" style="font-size: 32px; color: #000; margin-bottom: 15px;"></i>
+					</div>
+					<div style="font-family: 'Karla', sans-serif; color: #555; line-height: 1.7; font-size: 16px;">
+						<p style="margin-bottom: 20px;">My yoga journey began when I was just five years old. At that age, I didn't fully understand what yoga truly was — all I knew was that it made me feel calm, happy, and alive. With time, practice, and the gentle encouragement of my parents and teachers, yoga became more than just a routine — it became my passion and purpose.</p>
+						
+						<p style="margin-bottom: 20px;">As I grew, so did my curiosity and love for the practice. What started as simple postures soon turned into a lifelong pursuit of balance, discipline, and mindfulness. I went on to complete my Diploma in Yoga Teacher Training from Bharat Sevak Samaj and later earned certification as a Yoga Teacher and Evaluator from the Yoga Certification Board, Ministry of Ayush, Government of India.</p>
+						
+						<p style="margin-bottom: 20px;">Over the years, I've been honored with several recognitions, including the Yoga Jothi Award, Yoga Bharathi Award, Yoga Bhooshan Award, and even entries in the Patanjali Book of World Records and the Guinness World Record. I've proudly represented at both national and international yoga championships, earning medals and titles that remind me how dedication and love for the art can take us far.</p>
+						
+						<p style="margin-bottom: 0; font-style: italic; color: #666;">My yoga journey began long before I even understood what yoga truly was. With each passing day, it grew from playful stretches to a deep connection of mind, body, and soul. Today, I share that same joy and energy through every class I teach — helping others find stillness, strength, and self-love.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Philosophy Section -->
+		<section class="philosophy-section" style="padding: 60px 0; background: white;">
+			<div class="container">
+				<h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #2c3e50; text-align: center; margin: 0 0 50px; font-weight: 700;">My Philosophy</h2>
+				<div class="philosophy-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+					
+					<div class="philosophy-card animate-on-scroll scale" data-delay="0" style="background: var(--bg); border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+						<div class="philosophy-icon" style="margin-bottom: 20px;">
+							<i class="fas fa-leaf" style="font-size: 40px; color: #000;"></i>
+						</div>
+						<h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50; margin: 0 0 15px; font-weight: 700;">Holistic Wellness</h3>
+						<p style="font-family: 'Karla', sans-serif; color: #666; line-height: 1.6; margin: 0;">Yoga isn't just physical exercise — it's a complete lifestyle that nurtures mind, body, and spirit in harmony.</p>
+					</div>
+
+					<div class="philosophy-card animate-on-scroll scale" data-delay="100" style="background: var(--bg); border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+						<div class="philosophy-icon" style="margin-bottom: 20px;">
+							<i class="fas fa-users" style="font-size: 40px; color: #000;"></i>
+						</div>
+						<h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50; margin: 0 0 15px; font-weight: 700;">Inclusive Teaching</h3>
+						<p style="font-family: 'Karla', sans-serif; color: #666; line-height: 1.6; margin: 0;">Every student, regardless of age or ability, deserves a supportive environment to explore their potential.</p>
+					</div>
+
+					<div class="philosophy-card animate-on-scroll scale" data-delay="200" style="background: var(--bg); border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+						<div class="philosophy-icon" style="margin-bottom: 20px;">
+							<i class="fas fa-heart" style="font-size: 40px; color: #000;"></i>
+						</div>
+						<h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50; margin: 0 0 15px; font-weight: 700;">Mindful Practice</h3>
+						<p style="font-family: 'Karla', sans-serif; color: #666; line-height: 1.6; margin: 0;">True yoga happens when we bring awareness and compassion to every breath and movement.</p>
+					</div>
+
+					<div class="philosophy-card animate-on-scroll scale" data-delay="300" style="background: var(--bg); border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+						<div class="philosophy-icon" style="margin-bottom: 20px;">
+							<i class="fas fa-seedling" style="font-size: 40px; color: #000;"></i>
+						</div>
+						<h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: #2c3e50; margin: 0 0 15px; font-weight: 700;">Continuous Growth</h3>
+						<p style="font-family: 'Karla', sans-serif; color: #666; line-height: 1.6; margin: 0;">Learning and evolving together, celebrating each milestone on our shared journey of self-discovery.</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Script: compute circle positions so they 'kiss' and align cards -->
+		<script>
+				function positionV(wrapId, side, cardId){
+					var wrap = document.getElementById(wrapId);
+					if(!wrap) return;
+					var top = wrap.querySelector('.small-top');
+					var mid = wrap.querySelector('.small-mid');
+					var bot = wrap.querySelector('.small-bot');
+					if(!top||!mid||!bot) return;
+
+					// measure diameter D using the mid circle
+					var midRect = mid.getBoundingClientRect();
+					var D = Math.round(midRect.width);
+
+					// dy fraction controls steepness. 0.78 is a good starting value (tweakable)
+					var dyFraction = 0.78;
+					var dy = Math.round(D * dyFraction);
+					var dx = Math.round(Math.sqrt(Math.max(0, D*D - dy*dy)));
+
+					// find the nearest container to base 'far left'/'far right' positions
+					var container = wrap.closest('.container') || document.body;
+					var contRect = container.getBoundingClientRect();
+					var wrapRect = wrap.getBoundingClientRect();
+
+					// padding from container edge so the circles don't touch the window edge
+					var edgePadding = 16;
+
+					// sign: for 'right' wrap, top/bot remain at container right edge; for 'left', at container left
+					var sign = (side === 'right') ? 1 : -1;
+
+					// compute absolute center X (page coordinates) for the vertical column (first & third centers)
+					var centerXpage;
+					if(side === 'right'){
+						centerXpage = contRect.right - edgePadding - D/2; // far right inside container
+					} else {
+						centerXpage = contRect.left + edgePadding + D/2; // far left inside container
+					}
+
+					// compute top center Y (page coords) — start near top of wrap
+					var topPadding = 8; // small gap from top of wrap
+					var yTopPage = wrapRect.top + topPadding + D/2;
+
+					// positions for centers
+					var cx_top_page = centerXpage;
+					var cy_top_page = yTopPage;
+
+					var cx_mid_page = centerXpage - sign*dx; // middle shifts opposite side (creates V)
+					var cy_mid_page = yTopPage + dy;
+
+					var cx_bot_page = centerXpage;
+					var cy_bot_page = yTopPage + 2*dy;
+
+					// convert page centers to wrap-local left/top values for absolute positioning
+					function setAbsPos(el, cx_page, cy_page, z){
+						var leftInWrap = Math.round(cx_page - wrapRect.left - D/2);
+						var topInWrap = Math.round(cy_page - wrapRect.top - D/2);
+						el.style.position = 'absolute';
+						el.style.left = leftInWrap + 'px';
+						el.style.top = topInWrap + 'px';
+						if(typeof z !== 'undefined') el.style.zIndex = z;
+					}
+
+					setAbsPos(top, cx_top_page, cy_top_page, 3);
+					setAbsPos(mid, cx_mid_page, cy_mid_page, 2);
+					setAbsPos(bot, cx_bot_page, cy_bot_page, 1);
+
+					// align the card vertically so its center matches mid circle center
+					if(cardId){
+						var card = document.getElementById(cardId);
+						if(card){
+							// find parent's top (where card.top will be relative)
+							var parent = card.parentElement;
+							var parentRect = parent.getBoundingClientRect();
+							var parentTopPage = parentRect.top;
+							var cardHeight = card.offsetHeight;
+							var topForCard = Math.round(cy_mid_page - cardHeight/2 - parentTopPage);
+							card.style.position = 'relative';
+							card.style.top = topForCard + 'px';
+							// if this is the mirrored-right-card specifically, ensure it's moved down precisely
+							if(cardId === 'mirrored-right-card'){
+								card.style.top = topForCard + 'px';
+							}
+						}
+					}
+				}
+
+				function updateAll(){
+					positionV('small-wrap-right','right','stacked-left-card');
+					positionV('small-wrap-left','left','mirrored-right-card');
+				}
+
+				// wait for images in both wraps before positioning
+				function whenImagesReadyById(id, cb){
+					var wrap = document.getElementById(id);
+					if(!wrap){ cb(); return; }
+					var imgs = wrap.querySelectorAll('img');
+					var remaining = imgs.length;
+					if(remaining === 0) { cb(); return; }
+					imgs.forEach(function(img){
+						if(img.complete) { remaining--; }
+						else { img.addEventListener('load', function(){ remaining--; if(remaining===0) cb(); }); img.addEventListener('error', function(){ remaining--; if(remaining===0) cb(); }); }
+					});
+					if(remaining === 0) cb();
+				}
+
+				window.addEventListener('load', function(){
+					whenImagesReadyById('small-wrap-right', function(){
+						whenImagesReadyById('small-wrap-left', function(){ setTimeout(updateAll,60); });
+					});
+				});
+
+				window.addEventListener('resize', function(){ setTimeout(updateAll,80); });
+		</script>
+
+		<!-- Credentials Section -->
+		<section class="credentials-section" style="padding: 60px 0; background: var(--bg);">
+			<div class="container">
+				<h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #2c3e50; text-align: center; margin: 0 0 50px; font-weight: 700;">Credentials & Experience</h2>
+				<div class="credentials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+					
+					<div class="credential-card animate-on-scroll from-left" data-delay="0" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+						<div style="text-align: center; margin-bottom: 20px;">
+							<i class="fas fa-graduation-cap" style="font-size: 40px; color: #000; margin-bottom: 15px;"></i>
+						</div>
+						<h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: #2c3e50; margin: 0 0 15px; text-align: center; font-weight: 700;">Education & Certification</h3>
+						<ul style="font-family: 'Karla', sans-serif; color: #666; line-height: 1.7; margin: 0; padding-left: 20px;">
+							<li style="margin-bottom: 8px;">Diploma in Yoga Teacher Training from Bharat Sevak Samaj</li>
+							<li style="margin-bottom: 8px;">Certified Yoga Teacher and Evaluator from Yoga Certification Board</li>
+							<li style="margin-bottom: 8px;">Ministry of Ayush, Government of India</li>
+						</ul>
+					</div>
+
+					<div class="credential-card animate-on-scroll from-right" data-delay="100" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+						<div style="text-align: center; margin-bottom: 20px;">
+							<i class="fas fa-trophy" style="font-size: 40px; color: #000; margin-bottom: 15px;"></i>
+						</div>
+						<h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: #2c3e50; margin: 0 0 15px; text-align: center; font-weight: 700;">Awards & Recognition</h3>
+						<ul style="font-family: 'Karla', sans-serif; color: #666; line-height: 1.7; margin: 0; padding-left: 20px;">
+							<li style="margin-bottom: 8px;">Yoga Jothi Award</li>
+							<li style="margin-bottom: 8px;">Yoga Bharathi Award</li>
+							<li style="margin-bottom: 8px;">Yoga Bhooshan Award</li>
+							<li style="margin-bottom: 8px;">Patanjali Book of World Records</li>
+							<li style="margin-bottom: 8px;">Guinness World Record</li>
+							<li style="margin-bottom: 0;">National & International Yoga Championships</li>
+						</ul>
+					</div>
+
+					<div class="credential-card animate-on-scroll from-left" data-delay="200" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+						<div style="text-align: center; margin-bottom: 20px;">
+							<i class="fas fa-clock" style="font-size: 40px; color: #000; margin-bottom: 15px;"></i>
+						</div>
+						<h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: #2c3e50; margin: 0 0 15px; text-align: center; font-weight: 700;">Experience</h3>
+						<div style="font-family: 'Karla', sans-serif; color: #666; line-height: 1.7;">
+							<p style="margin-bottom: 15px; font-weight: 600; color: #2c3e50;">15+ Years of Yoga Practice</p>
+							<p style="margin-bottom: 15px; font-weight: 600; color: #2c3e50;">4+ Years of Teaching Experience</p>
+							<p style="margin-bottom: 0;">With 15 years of yoga practice and over 4 years of teaching experience, I've had the joy of guiding students of all age groups — from curious kids to graceful adults — to explore the power of yoga in their own lives.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Personal Touch Section -->
+		<section class="personal-section" style="padding: 60px 0; background: white;">
+			<div class="container">
+				<div class="personal-card animate-on-scroll fade" data-delay="0" style="background: var(--bg); border-radius: 16px; padding: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); max-width: 900px; margin: 0 auto; text-align: center;">
+					<div style="margin-bottom: 30px;">
+						<i class="fas fa-om" style="font-size: 48px; color: #000; margin-bottom: 20px;"></i>
+					</div>
+					<h2 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #2c3e50; margin: 0 0 25px; font-weight: 700;">My Teaching Style</h2>
+					<div style="font-family: 'Karla', sans-serif; color: #555; line-height: 1.7; font-size: 16px; max-width: 700px; margin: 0 auto;">
+						<p style="margin-bottom: 20px;">My classes are crafted to help every student find their rhythm — combining strength, flexibility, mindfulness, and joy. I believe in creating a supportive environment where everyone feels comfortable exploring their practice at their own pace.</p>
+						
+						<p style="margin-bottom: 20px;">For me, yoga isn't just a practice — it's a lifestyle. It teaches me patience, compassion, and the beauty of being present in every moment. Through my classes, I hope to inspire others to embrace yoga not just on the mat, but in every aspect of their life.</p>
+						
+						<p style="margin-bottom: 0; font-size: 18px; font-style: italic; color: #2c3e50; font-weight: 600;">🧘🏻‍♀️ Let's flow, breathe, and grow together.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action -->
+		<section class="cta-section" style="padding: 60px 0; background: var(--bg); text-align: center;">
+			<div class="container">
+				<div class="cta-content animate-on-scroll from-bottom" data-delay="0">
+					<h2 style="font-family: 'Playfair Display', serif; font-size: 28px; color: #2c3e50; margin: 0 0 20px; font-weight: 700;">Ready to Begin Your Journey?</h2>
+					<p style="font-family: 'Karla', sans-serif; color: #666; font-size: 16px; margin: 0 0 30px;">Join me for a transformative yoga experience that nurtures your mind, body, and soul.</p>
+					<div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+						<a class="btn" href="classes.html" style="background: var(--teal); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: 700; transition: transform 0.18s ease, box-shadow 0.18s;">VIEW CLASSES</a>
+						<a class="btn outline" href="https://docs.google.com/forms/d/e/1FAIpQLSfIzCvYCXStnNeaX9WERmhpwey_k5C2RK3rLk8SVas2u_Rx6g/viewform?usp=header" style="background: transparent; color: #2c3e50; border: 2px solid rgba(44, 62, 80, 0.2); padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: 700; transition: transform 0.18s ease, box-shadow 0.18s;">REGISTER NOW</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="site-footer">
+			<div class="footer-inner container">
+					<div class="footer-left">
+						<div class="footer-contact">Contact Us</div>
+					</div>
+				<div class="footer-center">
+					<div class="footer-copy">© 2025 Swadhyaya Yoga. All rights reserved</div>
+				</div>
+					<div class="footer-right">
+						<div class="footer-email" style="display:flex;gap:12px;align-items:center;justify-content:flex-end;"><span style="display:inline-block;vertical-align:middle;margin-right:8px;"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5C3 6.67157 3.67157 6 4.5 6H19.5C20.3284 6 21 6.67157 21 7.5V16.5C21 17.3284 20.3284 18 19.5 18H4.5C3.67157 18 3 17.3284 3 16.5V7.5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 7.5L12 13L3 7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="mailto:swadhyayayoga0809@gmail.com">swadhyayayoga0809@gmail.com</a></div>
+						<div class="footer-location" style="display:flex;align-items:center;justify-content:flex-end;margin-top:6px;"><span style="display:inline-block;vertical-align:middle;margin-right:8px;"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 10.5C21 16.5 12 21 12 21C12 21 3 16.5 3 10.5C3 7.18629 5.68629 4.5 9 4.5C11.2091 4.5 13 6.29086 13 8.5C13 6.29086 14.7909 4.5 17 4.5C20.3137 4.5 23 7.18629 23 10.5H21Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>S2-2nd Floor, 354, Paneer Nagar, Mogappair, Chennai, Tamil Nadu 600037</span></div>
+						<div class="footer-phone-right"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.01.38 1.99.76 2.92a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.16-1.16a2 2 0 0 1 2.11-.45c.93.38 1.91.64 2.92.76A2 2 0 0 1 22 16.92z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>9500434722, 7358218027</span></div>
+					</div>
+			</div>
+		</footer>
+	</main>
+
+	<script src="index.js"></script>
+	
+	<!-- Scroll Animation Script -->
+	<script>
+		// Enhanced scroll animations for About page
+		document.addEventListener('DOMContentLoaded', function() {
+			const animateElements = document.querySelectorAll('.animate-on-scroll');
+			
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const delay = entry.target.dataset.delay || 0;
+						setTimeout(() => {
+							entry.target.classList.add('in-view');
+						}, delay);
+						observer.unobserve(entry.target);
+					}
+				});
+			}, {
+				threshold: 0.1,
+				rootMargin: '0px 0px -50px 0px'
+			});
+
+			animateElements.forEach(el => observer.observe(el));
+		});
+
+		// Hover effects for philosophy cards
+		document.addEventListener('DOMContentLoaded', function() {
+			const philosophyCards = document.querySelectorAll('.philosophy-card');
+			
+			philosophyCards.forEach(card => {
+				card.addEventListener('mouseenter', function() {
+					this.style.transform = 'translateY(-8px)';
+					this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.12)';
+				});
+				
+				card.addEventListener('mouseleave', function() {
+					this.style.transform = 'translateY(0)';
+					this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.05)';
+				});
+			});
+		});
+	</script>
+</body>
+</html>

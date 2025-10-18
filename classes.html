@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes & Schedule - Swadhyaya Yoga</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation (copied from home) -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="lotus" aria-hidden="true">✿</span>
+        <span class="logo-text">SWADHYAYA YOGA</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a class="active" href="classes.html">CLASSES &amp; SCHEDULE</a></li>
+          <li><a href="index.html#techniques">TECHNIQUES</a></li>
+          <li><a href="index.html#testimonials">TESTIMONIALS</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn register" href="https://docs.google.com/forms/d/e/1FAIpQLSfIzCvYCXStnNeaX9WERmhpwey_k5C2RK3rLk8SVas2u_Rx6g/viewform?usp=header">REGISTER NOW</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page-specific styles for pricing cards (keeps changes local to this page) -->
+    <style>
+      .pricing-cards-container{display:flex;justify-content:center;gap:25px;margin:50px auto;max-width:1200px;padding:0 20px;flex-wrap:wrap}
+      .pricing-card{background:white;border-radius:12px;padding:35px 25px;box-shadow:0 4px 15px rgba(0,0,0,0.08);width:30%;display:flex;flex-direction:column;min-height:520px;box-sizing:border-box}
+  .card-icon i{font-size:45px;color:#000;margin-bottom:20px;display:block}
+  .card-icon{font-size:45px;color:#000;margin-bottom:20px;text-align:center}
+      .card-heading{font-size:22px;font-weight:700;margin-bottom:10px;text-align:center;font-family:'Playfair Display'}
+  .card-content{flex-grow:1;text-align:center}
+  .register-btn{margin-top:auto;background-color:#000000;color:#ffffff;padding:12px 35px;border-radius:6px;border:none;cursor:pointer;font-weight:600;font-size:15px;transition:0.3s ease;width:100%;text-decoration:none}
+      .register-btn:hover{background-color:#2d2d2d;transform:translateY(-2px)}
+      @media (max-width:768px){.pricing-cards-container{flex-direction:column;align-items:center}.pricing-card{width:80%;margin-bottom:30px}}
+    </style>
+    <section class="classes-hero" style="background:var(--bg);padding-top:100px;padding-bottom:30px;text-align:center;">
+      <div class="container">
+        <h1 style="font-family:'Playfair Display', serif;font-size:44px;color:#2c3e50;margin:0 0 12px;">Class Plans &amp; Fees</h1>
+        <p style="font-family:'Karla',sans-serif;color:#666;font-size:16px;margin:0 0 18px;">Join our community and embark your journey to wellness</p>
+        <hr style="width:80px;border:none;border-top:2px solid rgba(0,0,0,0.06);margin:18px auto 0;">
+      </div>
+    </section>
+
+    <section class="pricing" style="padding:50px 0;background:var(--bg);">
+      <div class="pricing-cards-container">
+
+        <!-- Card 1 -->
+        <div class="pricing-card">
+          <div class="card-icon"><i class="fas fa-child"></i></div>
+          <div class="card-heading">Kids Batch (Below 10 Years)</div>
+          <div class="card-content">
+            <div style="font-style:italic;color:#555;margin-bottom:18px;font-size:14px;">Around 5-9 yrs — playful yoga</div>
+            <div class="pricing-table" style="margin:20px 0;text-align:left;">
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><strong>Monthly</strong><span>₹2,000</span></div>
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>3 Months</span><span>₹4,500</span></div>
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>6 Months</span><span>₹6,000</span></div>
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>12 Months</span><span>₹7,500</span></div>
+              <div style="color:#777;font-size:13px;margin-top:8px;">Fun &amp; engaging sessions — Popular with parents</div>
+            </div>
+          </div>
+          <!-- register button removed -->
+        </div>
+
+        <!-- Card 2 -->
+        <div class="pricing-card">
+          <div class="card-icon"><i class="fas fa-users"></i></div>
+          <div class="card-heading">Teen &amp; Adult Batch (10+ Years)</div>
+          <div class="card-content">
+            <div style="color:#555;margin-bottom:18px;font-size:14px;">Includes teens, women, and adults</div>
+            <div class="pricing-table" style="margin:20px 0;text-align:left;">
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><strong>Monthly</strong><span>₹2,500</span></div>
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>3 Months</span><span>₹6,500</span></div>
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>6 Months</span><span>₹9,500</span></div>
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>12 Months</span><span>₹12,000</span></div>
+              <div style="color:#777;font-size:13px;margin-top:8px;">Standard plan — Save with longer commitments</div>
+            </div>
+          </div>
+          <!-- register button removed -->
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pricing-card">
+          <div class="card-icon"><i class="fas fa-user"></i></div>
+          <div class="card-heading">Private Classes (Weekends)</div>
+          <div class="card-content">
+            <div style="color:#555;margin-bottom:18px;font-size:14px;">Personalized sessions tailored to your goals</div>
+            <div class="pricing-table" style="margin:20px 0;text-align:left;">
+              <div style="display:flex;justify-content:space-between;padding:6px 0"><strong>1-on-1 Session</strong><span>2 hours — ₹3,000</span></div>
+            </div>
+            <div style="color:#777;font-size:13px;margin-top:8px;">Flexible weekend scheduling available</div>
+          </div>
+          <!-- register button removed -->
+        </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- GAP REGISTER BUTTON: centered between the pricing cards and the special-offers card -->
+    <div style="text-align:center;margin:-19px 0 6px;">
+      <a class="register-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfIzCvYCXStnNeaX9WERmhpwey_k5C2RK3rLk8SVas2u_Rx6g/viewform?usp=header" target="_blank" rel="noopener" style="width:auto;display:inline-block;padding:12px 36px;text-decoration:none;">REGISTER NOW</a>
+    </div>
+
+  <section class="special-offers" style="padding:40px 0;margin:11px auto;max-width:1200px;text-align:center;">
+      <div class="container">
+        <div class="special-card" style="background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:28px 36px;display:inline-block;text-align:left;max-width:900px;width:100%">
+          <h2 style="font-size:26px;font-weight:700;color:#2c3e50;margin-top:0;"><i class="fas fa-award" style="color:#000;margin-right:10px;"></i>Special Offers</h2>
+          <ul style="list-style:none;font-size:18px;line-height:2.2;padding-left:0;margin-top:12px;margin-bottom:0;">
+            <li><strong>Mother + Child Combo:</strong> ₹3,800/month — (Save when you join together!)</li>
+            <li><strong>Refer a Friend:</strong> Both get ₹300 off next month — (Share the wellness journey)</li>
+            <!-- <li><strong>Trial Class:</strong> ₹200 (redeemable on joining) — (Experience before you commit)</li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (copied from home page) -->
+    <footer class="site-footer">
+      <div class="footer-inner container">
+        <div class="footer-left">
+          <div class="footer-contact">Contact Us</div>
+          <div class="footer-contact">Contact Us</div>
+        </div>
+        <div class="footer-center">
+          <div class="footer-copy">© 2025 Swadhyaya Yoga. All rights reserved</div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-email" style="display:flex;gap:12px;align-items:center;justify-content:flex-end;"><span style="display:inline-block;vertical-align:middle;margin-right:8px;"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5C3 6.67157 3.67157 6 4.5 6H19.5C20.3284 6 21 6.67157 21 7.5V16.5C21 17.3284 20.3284 18 19.5 18H4.5C3.67157 18 3 17.3284 3 16.5V7.5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 7.5L12 13L3 7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="mailto:swadhyayayoga0809@gmail.com">swadhyayayoga0809@gmail.com</a></div>
+          <div class="footer-location" style="display:flex;align-items:center;justify-content:flex-end;margin-top:6px;"><span style="display:inline-block;vertical-align:middle;margin-right:8px;"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 10.5C21 16.5 12 21 12 21C12 21 3 16.5 3 10.5C3 7.18629 5.68629 4.5 9 4.5C11.2091 4.5 13 6.29086 13 8.5C13 6.29086 14.7909 4.5 17 4.5C20.3137 4.5 23 7.18629 23 10.5H21Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>S2-2nd Floor, 354, Paneer Nagar, Mogappair, Chennai, Tamil Nadu 600037</span></div>
+          <div class="footer-phone-right" style="display:flex; align-items:center; justify-content:flex-end;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12 1.01.38 1.99.76 2.92a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.16-1.16a2 2 0 0 1 2.11-.45c.93.38 1.91.64 2.92.76A2 2 0 0 1 22 16.92z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>9500434722, 7358218027</span></div>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
+
