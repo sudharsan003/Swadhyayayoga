@@ -37,18 +37,32 @@
   </header>
 
   <main>
-    <!-- Page-specific styles for pricing cards (keeps changes local to this page) -->
+    <!-- Page-specific styles for fee structure tables -->
     <style>
-      .pricing-cards-container{display:flex;justify-content:center;gap:25px;margin:50px auto;max-width:1200px;padding:0 20px;flex-wrap:wrap}
-      .pricing-card{background:white;border-radius:12px;padding:35px 25px;box-shadow:0 4px 15px rgba(0,0,0,0.08);width:30%;display:flex;flex-direction:column;min-height:520px;box-sizing:border-box}
-  .card-icon i{font-size:45px;color:#000;margin-bottom:20px;display:block}
-  .card-icon{font-size:45px;color:#000;margin-bottom:20px;text-align:center}
-      .card-heading{font-size:22px;font-weight:700;margin-bottom:10px;text-align:center;font-family:'Playfair Display'}
-  .card-content{flex-grow:1;text-align:center}
-  .register-btn{margin-top:auto;background-color:#000000;color:#ffffff;padding:12px 35px;border-radius:6px;border:none;cursor:pointer;font-weight:600;font-size:15px;transition:0.3s ease;width:100%;text-decoration:none}
+      .register-btn{background-color:#000000;color:#ffffff;padding:12px 35px;border-radius:6px;border:none;cursor:pointer;font-weight:600;font-size:15px;transition:0.3s ease;text-decoration:none;display:inline-block}
       .register-btn:hover{background-color:#2d2d2d;transform:translateY(-2px)}
-      @media (max-width:768px){.pricing-cards-container{flex-direction:column;align-items:center}.pricing-card{width:80%;margin-bottom:30px}}
+      
+      .fee-structure-section{background:#2c2c2c;color:#fff;padding:60px 20px;margin:0;}
+      .fee-structure-container{max-width:1200px;margin:0 auto;}
+      .fee-structure-section h1{font-size:42px;font-weight:700;font-family:'Playfair Display',serif;margin:0 0 40px;text-decoration:underline;}
+      .fee-structure-section h2{font-size:28px;font-weight:700;margin:30px 0 20px;font-family:'Karla',sans-serif;}
+      
+      .fee-table{width:100%;border-collapse:collapse;margin-bottom:40px;background:#1a1a1a;}
+      .fee-table td{border:2px solid #444;padding:15px 20px;font-size:18px;font-family:'Karla',sans-serif;}
+      .fee-table td:first-child{font-weight:600;min-width:150px;}
+      .fee-table td:last-child{text-align:right;}
+      
+      .fee-note{font-size:14px;color:#aaa;margin-top:8px;font-style:italic;}
+      
+      .combo-offer{margin-top:30px;font-size:16px;color:#fff;}
+      
+      @media (max-width:768px){
+        .fee-structure-section h1{font-size:32px;}
+        .fee-structure-section h2{font-size:22px;}
+        .fee-table td{padding:12px 15px;font-size:16px;}
+      }
     </style>
+    
     <section class="classes-hero" style="background:var(--bg);padding-top:100px;padding-bottom:30px;text-align:center;">
       <div class="container">
         <h1 style="font-family:'Playfair Display', serif;font-size:44px;color:#2c3e50;margin:0 0 12px;">Class Plans &amp; Fees</h1>
@@ -57,63 +71,65 @@
       </div>
     </section>
 
-    <section class="pricing" style="padding:50px 0;background:var(--bg);">
-      <div class="pricing-cards-container">
-
-        <!-- Card 1 -->
-        <div class="pricing-card">
-          <div class="card-icon"><i class="fas fa-child"></i></div>
-          <div class="card-heading">Kids Batch (Below 10 Years)</div>
-          <div class="card-content">
-            <div style="font-style:italic;color:#555;margin-bottom:18px;font-size:14px;">Around 5-9 yrs — playful yoga</div>
-            <div class="pricing-table" style="margin:20px 0;text-align:left;">
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><strong>Monthly</strong><span>₹2,000</span></div>
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>3 Months</span><span>₹4,500</span></div>
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>6 Months</span><span>₹6,000</span></div>
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>12 Months</span><span>₹7,500</span></div>
-              <div style="color:#777;font-size:13px;margin-top:8px;">Fun &amp; engaging sessions — Popular with parents</div>
-            </div>
-          </div>
-          <!-- register button removed -->
-        </div>
-
-        <!-- Card 2 -->
-        <div class="pricing-card">
-          <div class="card-icon"><i class="fas fa-users"></i></div>
-          <div class="card-heading">Teen &amp; Adult Batch (10+ Years)</div>
-          <div class="card-content">
-            <div style="color:#555;margin-bottom:18px;font-size:14px;">Includes teens, women, and adults</div>
-            <div class="pricing-table" style="margin:20px 0;text-align:left;">
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><strong>Monthly</strong><span>₹2,500</span></div>
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>3 Months</span><span>₹6,500</span></div>
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>6 Months</span><span>₹9,500</span></div>
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><span>12 Months</span><span>₹12,000</span></div>
-              <div style="color:#777;font-size:13px;margin-top:8px;">Standard plan — Save with longer commitments</div>
-            </div>
-          </div>
-          <!-- register button removed -->
-        </div>
-
-        <!-- Card 3 -->
-        <div class="pricing-card">
-          <div class="card-icon"><i class="fas fa-user"></i></div>
-          <div class="card-heading">Private Classes (Weekends)</div>
-          <div class="card-content">
-            <div style="color:#555;margin-bottom:18px;font-size:14px;">Personalized sessions tailored to your goals</div>
-            <div class="pricing-table" style="margin:20px 0;text-align:left;">
-              <div style="display:flex;justify-content:space-between;padding:6px 0"><strong>1-on-1 Session</strong><span>2 hours — ₹3,000</span></div>
-            </div>
-            <div style="color:#777;font-size:13px;margin-top:8px;">Flexible weekend scheduling available</div>
-          </div>
-          <!-- register button removed -->
-        </div>
-          </div>
+    <section class="fee-structure-section">
+      <div class="fee-structure-container">
+        <h1>Fee Structure</h1>
+        
+        <h2>Below 13</h2>
+        <table class="fee-table">
+          <tr>
+            <td>Monthly</td>
+            <td>₹1,500</td>
+            <td>Regular fee</td>
+          </tr>
+          <tr>
+            <td>3 months</td>
+            <td>₹4,000</td>
+            <td>Discount ₹500</td>
+          </tr>
+          <tr>
+            <td>6 months</td>
+            <td>₹7,500</td>
+            <td>Discount ₹1,500</td>
+          </tr>
+          <tr>
+            <td>12 months</td>
+            <td>₹14,000</td>
+            <td>Discount ₹4,000</td>
+          </tr>
+        </table>
+        
+        <h2>13 &amp; Above</h2>
+        <table class="fee-table">
+          <tr>
+            <td>Monthly</td>
+            <td>₹2,000</td>
+            <td>Regular fee</td>
+          </tr>
+          <tr>
+            <td>3 months</td>
+            <td>₹5,500</td>
+            <td>Discount ₹500</td>
+          </tr>
+          <tr>
+            <td>6 months</td>
+            <td>₹10,500</td>
+            <td>Discount ₹1,500</td>
+          </tr>
+          <tr>
+            <td>12 months</td>
+            <td>₹20,000</td>
+            <td>Discount ₹4,000</td>
+          </tr>
+        </table>
+        
+        <div class="combo-offer">Mom and child combo is ₹3,000</div>
       </div>
     </section>
 
-    <!-- GAP REGISTER BUTTON: centered between the pricing cards and the special-offers card -->
-    <div style="text-align:center;margin:-19px 0 6px;">
-      <a class="register-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfIzCvYCXStnNeaX9WERmhpwey_k5C2RK3rLk8SVas2u_Rx6g/viewform?usp=header" target="_blank" rel="noopener" style="width:auto;display:inline-block;padding:12px 36px;text-decoration:none;">REGISTER NOW</a>
+    <!-- REGISTER BUTTON: centered -->
+    <div style="text-align:center;padding:30px 0;background:#f5f5f5;">
+      <a class="register-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfIzCvYCXStnNeaX9WERmhpwey_k5C2RK3rLk8SVas2u_Rx6g/viewform?usp=header" target="_blank" rel="noopener">REGISTER NOW</a>
     </div>
 
   <section class="special-offers" style="padding:40px 0;margin:11px auto;max-width:1200px;text-align:center;">
@@ -134,10 +150,9 @@
       <div class="footer-inner container">
         <div class="footer-left">
           <div class="footer-contact">Contact Us</div>
-          <div class="footer-contact">Contact Us</div>
         </div>
         <div class="footer-center">
-          <div class="footer-copy">© 2025 Swadhyaya Yoga. All rights reserved</div>
+          <div class="footer-copy">© 2026 Swadhyaya Yoga. All rights reserved</div>
         </div>
         <div class="footer-right">
           <div class="footer-email" style="display:flex;gap:12px;align-items:center;justify-content:flex-end;"><span style="display:inline-block;vertical-align:middle;margin-right:8px;"> <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5C3 6.67157 3.67157 6 4.5 6H19.5C20.3284 6 21 6.67157 21 7.5V16.5C21 17.3284 20.3284 18 19.5 18H4.5C3.67157 18 3 17.3284 3 16.5V7.5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 7.5L12 13L3 7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="mailto:swadhyayayoga0809@gmail.com">swadhyayayoga0809@gmail.com</a></div>
